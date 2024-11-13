@@ -2,8 +2,8 @@ save_dir: "save"
 
 data: 
   dataset: "iuxray"
-  image_dir: "/workspace/dataset/OpenI/NLMCXR_png"
-  ann_path: "/workspace/dataset/OpenI/data_final.json"
+  image_dir: "data/iu_xray/NLMCXR_png"
+  ann_path: "data/iu_xray/data_final.json"
   num_workers: 8
   prefetch_factor: 4
   image_size: 256
@@ -32,7 +32,7 @@ model:
   tokenizer:
     eos_token: "</s>"
   text_decoder:
-    model_name: "llama3"
+    model_name: "llama"
     # hf_backbone: "cache/LLaMA3/llama-3-8b-instruct/" # "emilyalsentzer/Bio_ClinicalBERT"
     hf_backbone: "/workspace/hf/LLaMA2/llama-2-7b-chat/" # "emilyalsentzer/Bio_ClinicalBERT"
     can_batch_generate: true
