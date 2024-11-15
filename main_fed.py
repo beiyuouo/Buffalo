@@ -9,6 +9,7 @@ from lightning.pytorch import seed_everything
 from model.module.callbacks import add_callbacks
 import lightning.pytorch as pl
 from model.mrg import MRGModel
+from model.mvqa import MVQAModel
 from dataset.data_module import DataModule
 from utils import get_mean_iuxray, get_mean_mvqa
 
@@ -40,7 +41,7 @@ def train_client(cfg, client_idx=None, round_idx=0, params=None, client_type=Non
     )
 
     # build model architecture
-    model = MRGModel(cfg) # if cfg.task.type == "mrg" else MVQAModel(cfg)
+    model = MRGModel(cfg) if cfg.task.type == "mrg" else MVQAModel(cfg)
     # logger.info(f"Model: {model}")
 
     if params is not None:

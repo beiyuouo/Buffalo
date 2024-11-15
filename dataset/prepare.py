@@ -400,8 +400,8 @@ def prepare_slake_to_json():
         for i in range(len(qa_data)):
             # print(i, qa_data[i]["answer_type"])
             # if str(qa_data[i]["answer_type"]) == "CLOSED":
-            # if str(qa_data[i]["answer_type"]) == "OPEN":
-            #     continue
+            if str(qa_data[i]["answer_type"]) == "OPEN":
+                continue
             # if str(qa_data[i]["answer"]).lower() == "yes" or str(qa_data[i]["answer"]).lower() == "no":
             if str(qa_data[i]["answer"]).lower() != "yes" and str(qa_data[i]["answer"]).lower() != "no":
                 continue

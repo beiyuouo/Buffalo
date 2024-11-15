@@ -15,7 +15,8 @@ if __name__ == "__main__":
     print("niid:", niid)
 
     cfg_file = os.path.join(os.path.dirname(__file__), "config", "mrg_config.yaml")
-    # cfg_file = os.path.join(os.path.dirname(__file__), "config", "mvqa_config.yaml")
+    cfg_file = os.path.join(os.path.dirname(__file__), "config", "mvqa_slake_config.yaml")
+    # cfg_file = os.path.join(os.path.dirname(__file__), "config", "mvqa_vqarad_config.yaml")
     cfg = ez.load(cfg_file)
 
     if not niid:
